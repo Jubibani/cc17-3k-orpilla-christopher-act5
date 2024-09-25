@@ -7,25 +7,26 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.artspaceapp.MainActivity2
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main3)
 
         val backButton : Button = findViewById(R.id.button)
         val nextButton : Button = findViewById(R.id.button2)
 
 
         backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
 
         }
 
         nextButton.setOnClickListener {
-            val intent = Intent(this, MainActivity3::class.java)
+            val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
 
         }
