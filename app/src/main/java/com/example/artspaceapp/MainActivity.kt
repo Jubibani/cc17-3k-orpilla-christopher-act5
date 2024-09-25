@@ -1,12 +1,11 @@
 package com.example.artspaceapp
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,22 +13,25 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val backButton : Button = findViewById(R.id.button)
-        val nextButton : Button = findViewById(R.id.button2)
+        // Set content view based on orientation
+        val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_main_landscape)  // Load landscape layout
+        } else {
+            setContentView(R.layout.activity_main)  // Load portrait layout
+        }
+
+        val backButton: Button = findViewById(R.id.button)
+        val nextButton: Button = findViewById(R.id.button2)
 
         backButton.setOnClickListener {
             val intent = Intent(this, MainActivity5::class.java)
             startActivity(intent)
-
         }
 
         nextButton.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
-
         }
     }
-
-
-
 }
