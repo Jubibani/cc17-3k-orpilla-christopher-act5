@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ArtSpaceApp</string>
+    <string name="button">Button</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="just_because_time_flies_does_not_mean_it_s_pointless">Just because time Flies, does not mean it\'s Pointless.</string>
+    <string name="orpilla_christopher">Orpilla, Christopher</string>
+    <string name="todo">TODO</string>
+    <string name="boredom">boredom</string>
+</resources>
